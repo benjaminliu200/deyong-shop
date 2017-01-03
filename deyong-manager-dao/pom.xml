@@ -41,38 +41,4 @@
             <artifactId>druid</artifactId>
         </dependency>
     </dependencies>
-    <!--<dependencies>-->
-        <!--<dependency>-->
-            <!--<groupId>com.deyong</groupId>-->
-            <!--<artifactId>deyong-manager-pojo</artifactId>-->
-            <!--<version>1.0-SNAPSHOT</version>-->
-        <!--</dependency>-->
-        <!--&lt;!&ndash; Mybatis &ndash;&gt;-->
-        <!--<dependency>-->
-            <!--<groupId>org.mybatis</groupId>-->
-            <!--<artifactId>mybatis</artifactId>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>org.mybatis</groupId>-->
-            <!--<artifactId>mybatis-spring</artifactId>-->
-        <!--</dependency>-->
-        <!--&lt;!&ndash;<dependency>&ndash;&gt;-->
-            <!--&lt;!&ndash;<groupId>com.github.miemiedev</groupId>&ndash;&gt;-->
-            <!--&lt;!&ndash;<artifactId>mybatis-paginator</artifactId>&ndash;&gt;-->
-        <!--&lt;!&ndash;</dependency>&ndash;&gt;-->
-        <!--<dependency>-->
-            <!--<groupId>com.github.pagehelper</groupId>-->
-            <!--<artifactId>pagehelper</artifactId>-->
-        <!--</dependency>-->
-        <!--&lt;!&ndash; MySql &ndash;&gt;-->
-        <!--<dependency>-->
-            <!--<groupId>mysql</groupId>-->
-            <!--<artifactId>mysql-connector-java</artifactId>-->
-        <!--</dependency>-->
-        <!--&lt;!&ndash; 连接池 &ndash;&gt;-->
-        <!--<dependency>-->
-            <!--<groupId>com.alibaba</groupId>-->
-            <!--<artifactId>druid</artifactId>-->
-        <!--</dependency>-->
-    <!--</dependencies>-->
 </project>
