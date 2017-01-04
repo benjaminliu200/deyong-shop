@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/deyong-manager-service/deyong-manager-service.iml" filepath="$PROJECT_DIR$/deyong-manager-service/deyong-manager-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/deyong-manager-web/deyong-manager-web.iml" filepath="$PROJECT_DIR$/deyong-manager-web/deyong-manager-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/deyong-parent/deyong-parent.iml" filepath="$PROJECT_DIR$/deyong-parent/deyong-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pagehelper/pagehelper.iml" filepath="$PROJECT_DIR$/pagehelper/pagehelper.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/xbb.iml" filepath="$PROJECT_DIR$/.idea/xbb.iml" />
     </modules>
   </component>

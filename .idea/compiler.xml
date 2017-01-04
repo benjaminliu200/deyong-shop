@@ -27,6 +27,7 @@
         <module name="deyong-manager-pojo" />
         <module name="deyong-manager-service" />
         <module name="deyong-manager-web" />
+        <module name="pagehelper" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -37,6 +38,7 @@
       <module name="deyong-manager-service" target="1.7" />
       <module name="deyong-manager-web" target="1.7" />
       <module name="deyong-parent" target="1.7" />
+      <module name="pagehelper" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

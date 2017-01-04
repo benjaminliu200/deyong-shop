@@ -16,6 +16,7 @@
         <option value="$PROJECT_DIR$/deyong-manager-service/pom.xml" />
         <option value="$PROJECT_DIR$/deyong-manager-web/pom.xml" />
         <option value="$PROJECT_DIR$/deyong-manager-dao/pom.xml" />
+        <option value="$PROJECT_DIR$/pagehelper/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
@@ -35,4 +36,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+  <component name="SvnBranchConfigurationManager">
+    <option name="mySupportsUserInfoFilter" value="true" />
+  </component>
 </project>

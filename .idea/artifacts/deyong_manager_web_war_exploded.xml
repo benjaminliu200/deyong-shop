@@ -14,7 +14,15 @@
             <element id="module-output" name="deyong-manager-dao" />
           </element>
           <element id="library" level="project" name="Maven: org.mybatis:mybatis:3.2.8" />
+          <element id="library" level="project" name="Maven: com.github.miemiedev:mybatis-paginator:1.2.15" />
+          <element id="archive" name="pagehelper-3.4.2-fix.jar">
+            <element id="module-output" name="pagehelper" />
+          </element>
+          <element id="library" level="project" name="Maven: com.github.jsqlparser:jsqlparser:0.9.5" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.32" />
+          <element id="archive" name="deyong-manager-pojo-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="deyong-manager-pojo" />
+          </element>
           <element id="library" level="project" name="Maven: org.springframework:spring-context:4.1.3.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-aop:4.1.3.RELEASE" />
           <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
