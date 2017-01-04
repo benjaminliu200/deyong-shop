@@ -10,6 +10,11 @@
           <element id="archive" name="deyong-manager-service-1.0-SNAPSHOT.jar">
             <element id="module-output" name="deyong-manager-service" />
           </element>
+          <element id="archive" name="deyong-manager-dao-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="deyong-manager-dao" />
+          </element>
+          <element id="library" level="project" name="Maven: org.mybatis:mybatis:3.2.8" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.32" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context:4.1.3.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-aop:4.1.3.RELEASE" />
           <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
@@ -28,6 +33,8 @@
           <element id="library" level="project" name="Maven: commons-io:commons-io:2.2" />
           <element id="library" level="project" name="Maven: org.mybatis:mybatis-spring:1.2.2" />
           <element id="library" level="project" name="Maven: com.alibaba:druid:1.0.9" />
+          <element id="library" level="project" name="Maven: commons-logging:commons-logging:1.2" />
+          <element id="library" level="project" name="Maven: log4j:log4j:1.2.17" />
           <element id="archive" name="deyong-common-1.0-SNAPSHOT.jar">
             <element id="module-output" name="deyong-common" />
           </element>
@@ -39,11 +46,9 @@
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.4.2" />
           <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpclient:4.3.5" />
           <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpcore:4.3.2" />
-          <element id="library" level="project" name="Maven: commons-logging:commons-logging:1.1.3" />
           <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.6" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-log4j12:1.6.4" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.6.4" />
-          <element id="library" level="project" name="Maven: log4j:log4j:1.2.16" />
         </element>
       </element>
       <element id="directory" name="META-INF">

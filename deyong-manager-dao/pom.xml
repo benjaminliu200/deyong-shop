@@ -23,8 +23,8 @@
             <artifactId>mybatis-spring</artifactId>
         </dependency>
         <!--<dependency>-->
-        <!--<groupId>com.github.miemiedev</groupId>-->
-        <!--<artifactId>mybatis-paginator</artifactId>-->
+            <!--<groupId>com.github.miemiedev</groupId>-->
+            <!--<artifactId>mybatis-paginator</artifactId>-->
         <!--</dependency>-->
         <!--<dependency>-->
             <!--<groupId>com.github.pagehelper</groupId>-->
