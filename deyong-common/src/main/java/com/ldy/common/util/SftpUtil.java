@@ -121,7 +121,7 @@ public class SftpUtil {
      * @return 成功返回true，否则返回false
      */
     public static boolean uploadFile(String host, String username, String password, Integer port, Integer timeout, String basePath,
-                              String filePath, String filename, InputStream input) {
+                                     String filePath, String filename, InputStream input) {
         try {
             JSch jsch = new JSch();
             session = jsch.getSession(username, host, port);
@@ -138,7 +138,14 @@ public class SftpUtil {
 
             logger.debug("connected successfully");
 
-            channel.put(input, basePath + filename, ChannelSftp.OVERWRITE);
+            String resultPath = basePath + '/' + filePath;
+            try {
+                channel.ls(resultPath);
+            } catch (Exception e) {
+                channel.mkdir(resultPath);
+            }
+            channel.cd(resultPath);
+            channel.put(input, filename, ChannelSftp.OVERWRITE);
             logger.debug("upload successful");
             logout();
             return true;
