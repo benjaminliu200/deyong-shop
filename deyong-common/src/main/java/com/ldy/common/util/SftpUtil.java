@@ -138,8 +138,6 @@ public class SftpUtil {
 
             logger.debug("connected successfully");
 
-            new SftpUtil().exist()
-
             channel.put(input, basePath + filename, ChannelSftp.OVERWRITE);
             logger.debug("upload successful");
             logout();

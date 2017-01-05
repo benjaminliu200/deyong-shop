@@ -6,6 +6,7 @@ import org.apache.log4j.Logger;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
@@ -65,17 +66,14 @@ public class SftpUtilCopy {
 
             logger.debug("connected successfully");
 
-            String start;
-            String resultPath = basePath + filePath;
-            if (channel.ls(resultPath) == null) {
-                String[] dirs = resultPath.split("/");
-                String tempPath = "/";
-                for (String dir: dirs) {
-                    channel.mkdir();
-                }
+            String resultPath = basePath + '/' + filePath;
+            try {
+                channel.ls(resultPath);
+            } catch (Exception e) {
+                channel.mkdir(resultPath);
             }
-
-            channel.put(input, basePath + filename, ChannelSftp.OVERWRITE);
+            channel.cd(resultPath);
+            channel.put(input, filename, ChannelSftp.OVERWRITE);
             logger.debug("upload successful");
             logout();
             return true;
@@ -100,5 +98,10 @@ public class SftpUtilCopy {
             session.disconnect();
         }
         logger.debug("logout successfully");
+    }
+
+    public static void main(String[] args) throws FileNotFoundException {
+        uploadFile("192.168.0.220", "root", "1234", 22, 60000, "/home/ldy/images",
+                "2016-12-20", "abc.jpg", new FileInputStream(new File("C:\\Users\\Benjamin\\Desktop\\pic\\admin.png")));
     }
 }
