@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="deyong-manager-web:war">
-    <output-path>$PROJECT_DIR$/deyong-manager-web/target</output-path>
-    <root id="archive" name="deyong-manager-web.war">
-      <element id="artifact" artifact-name="deyong-manager-web:war exploded" />
-    </root>
-  </artifact>
-</component>
