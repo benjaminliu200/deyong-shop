@@ -1,17 +1,20 @@
 package com.deyong.service.impl;
 
+import com.deyong.mapper.TbItemDescMapper;
 import com.deyong.mapper.TbItemMapper;
 import com.deyong.pojo.TbItem;
-import com.deyong.pojo.TbItemCatExample;
+import com.deyong.pojo.TbItemDesc;
 import com.deyong.pojo.TbItemExample;
 import com.deyong.service.ItemService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.ldy.common.pojo.EUDataGridResult;
-import com.ldy.common.pojo.EUTreeNode;
+import com.ldy.common.util.DeyongResult;
+import com.ldy.common.util.IDUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -28,6 +31,9 @@ public class ItemServiceImpl implements ItemService {
 
 	@Autowired
 	private TbItemMapper itemMapper;
+
+	@Autowired
+	private TbItemDescMapper itemDescMapper;
 	@Override
 	public TbItem getItemById(Long itemId) {
 		//TbItem item = itemMapper.selectByPrimaryKey(itemId);
@@ -64,5 +70,39 @@ public class ItemServiceImpl implements ItemService {
 		return result;
 	}
 
+	@Override
+	public DeyongResult saveItem(TbItem tbItem, String desc, String itemParams) {
+		Date date = new Date();
+		long id = IDUtils.genItemId();
+		tbItem.setId(id);
+		//商品状态，1-正常，2-下架，3-删除
+		tbItem.setStatus((byte) 1);
+		tbItem.setCreated(date);
+		tbItem.setUpdated(date);
+		itemMapper.insert(tbItem);
 
+		//创建TbItemDesc对象
+		DeyongResult result = insertItemDesc(id, date, desc);
+
+		if (result.getStatus() == 200) {
+			throw  new RuntimeException();
+		}
+		return DeyongResult.ok();
+	}
+
+	/**
+	 * 插入 itemDesc ，与item在同一个事物当中
+	 * @param id    item的id
+	 * @param date    日期
+	 * @param desc    描述
+	 */
+	private DeyongResult insertItemDesc(long id, Date date, String desc) {
+		TbItemDesc itemDesc = new TbItemDesc();
+		itemDesc.setItemId(id);
+		itemDesc.setCreated(date);
+		itemDesc.setUpdated(date);
+		itemDesc.setItemDesc(desc);
+		itemDescMapper.insert(itemDesc);
+		return DeyongResult.ok();
+	}
 }

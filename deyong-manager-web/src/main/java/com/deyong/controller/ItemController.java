@@ -4,9 +4,9 @@ import com.deyong.pojo.TbItem;
 import com.deyong.service.ItemCatService;
 import com.deyong.service.ItemParamService;
 import com.deyong.service.ItemService;
-import com.github.pagehelper.PageHelper;
 import com.ldy.common.pojo.EUDataGridResult;
 import com.ldy.common.pojo.EUTreeNode;
+import com.ldy.common.util.DeyongResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -53,6 +53,13 @@ public class ItemController {
 	@ResponseBody
 	public EUDataGridResult getParamItemList(Integer page, Integer rows) {
 		return itemParamService.getParamItemList(page, rows);
+	}
+
+	@RequestMapping("/item/save")
+	@ResponseBody
+	public DeyongResult saveItem(TbItem tbItem, String desc) {
+		// 添加商品信息
+		return itemService.saveItem(tbItem, desc, null);
 	}
 
 }

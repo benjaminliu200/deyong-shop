@@ -8,7 +8,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 /**
  * 淘淘商城自定义响应结构
  */
-public class TaotaoResult {
+public class DeyongResult {
 
     // 定义jackson对象
     private static final ObjectMapper MAPPER = new ObjectMapper();
@@ -22,33 +22,33 @@ public class TaotaoResult {
     // 响应中的数据
     private Object data;
 
-    public static TaotaoResult build(Integer status, String msg, Object data) {
-        return new TaotaoResult(status, msg, data);
+    public static DeyongResult build(Integer status, String msg, Object data) {
+        return new DeyongResult(status, msg, data);
     }
 
-    public static TaotaoResult ok(Object data) {
-        return new TaotaoResult(data);
+    public static DeyongResult ok(Object data) {
+        return new DeyongResult(data);
     }
 
-    public static TaotaoResult ok() {
-        return new TaotaoResult(null);
+    public static DeyongResult ok() {
+        return new DeyongResult(null);
     }
 
-    public TaotaoResult() {
+    public DeyongResult() {
 
     }
 
-    public static TaotaoResult build(Integer status, String msg) {
-        return new TaotaoResult(status, msg, null);
+    public static DeyongResult build(Integer status, String msg) {
+        return new DeyongResult(status, msg, null);
     }
 
-    public TaotaoResult(Integer status, String msg, Object data) {
+    public DeyongResult(Integer status, String msg, Object data) {
         this.status = status;
         this.msg = msg;
         this.data = data;
     }
 
-    public TaotaoResult(Object data) {
+    public DeyongResult(Object data) {
         this.status = 200;
         this.msg = "OK";
         this.data = data;
@@ -89,10 +89,10 @@ public class TaotaoResult {
      * @param clazz TaotaoResult中的object类型
      * @return
      */
-    public static TaotaoResult formatToPojo(String jsonData, Class<?> clazz) {
+    public static DeyongResult formatToPojo(String jsonData, Class<?> clazz) {
         try {
             if (clazz == null) {
-                return MAPPER.readValue(jsonData, TaotaoResult.class);
+                return MAPPER.readValue(jsonData, DeyongResult.class);
             }
             JsonNode jsonNode = MAPPER.readTree(jsonData);
             JsonNode data = jsonNode.get("data");
@@ -116,9 +116,9 @@ public class TaotaoResult {
      * @param json
      * @return
      */
-    public static TaotaoResult format(String json) {
+    public static DeyongResult format(String json) {
         try {
-            return MAPPER.readValue(json, TaotaoResult.class);
+            return MAPPER.readValue(json, DeyongResult.class);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -132,7 +132,7 @@ public class TaotaoResult {
      * @param clazz 集合中的类型
      * @return
      */
-    public static TaotaoResult formatToList(String jsonData, Class<?> clazz) {
+    public static DeyongResult formatToList(String jsonData, Class<?> clazz) {
         try {
             JsonNode jsonNode = MAPPER.readTree(jsonData);
             JsonNode data = jsonNode.get("data");
