@@ -9,6 +9,7 @@ import org.junit.Test;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.math.BigInteger;
 import java.util.Properties;
 
 /**
@@ -41,5 +42,16 @@ public class TestFtp {
 
         // 退出客户端
         client.logout();
+    }
+
+    @Test
+    public void testChar() {
+        char a = '6';
+        int i = Integer.parseInt(String.valueOf(a));
+        System.out.println(i);
+        BigInteger b1 = BigInteger.valueOf(22);
+        BigInteger b2 = BigInteger.valueOf(2222);
+        b1.compareTo(b2);
+        System.out.println(12%10);
     }
 }
