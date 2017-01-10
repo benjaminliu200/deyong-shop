@@ -24,9 +24,6 @@ public class ItemController {
 
 	@Autowired
 	private ItemCatService itemCatService;
-
-	@Autowired
-	private ItemParamService itemParamService;
 	
 	@RequestMapping("/item/{itemId}")
 	@ResponseBody
@@ -42,6 +39,7 @@ public class ItemController {
 		return result;
 	}
 
+
 	@RequestMapping("/item/cat/list")
 	@ResponseBody
 	public List<EUTreeNode> getItemCatList(@RequestParam(value = "id", defaultValue = "0") Long parentId) {
@@ -49,11 +47,7 @@ public class ItemController {
 		return result;
 	}
 
-	@RequestMapping("/item/param/list")
-	@ResponseBody
-	public EUDataGridResult getParamItemList(Integer page, Integer rows) {
-		return itemParamService.getParamItemList(page, rows);
-	}
+
 
 	@RequestMapping("/item/save")
 	@ResponseBody
