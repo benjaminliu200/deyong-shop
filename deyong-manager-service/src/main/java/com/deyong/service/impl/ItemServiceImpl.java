@@ -2,9 +2,11 @@ package com.deyong.service.impl;
 
 import com.deyong.mapper.TbItemDescMapper;
 import com.deyong.mapper.TbItemMapper;
+import com.deyong.mapper.TbItemParamItemMapper;
 import com.deyong.pojo.TbItem;
 import com.deyong.pojo.TbItemDesc;
 import com.deyong.pojo.TbItemExample;
+import com.deyong.pojo.TbItemParamItem;
 import com.deyong.service.ItemService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
@@ -34,6 +36,9 @@ public class ItemServiceImpl implements ItemService {
 
 	@Autowired
 	private TbItemDescMapper itemDescMapper;
+
+	@Autowired
+	private TbItemParamItemMapper itemParamItemMapper;
 	@Override
 	public TbItem getItemById(Long itemId) {
 		//TbItem item = itemMapper.selectByPrimaryKey(itemId);
@@ -84,6 +89,14 @@ public class ItemServiceImpl implements ItemService {
 		//创建TbItemDesc对象
 		DeyongResult result = insertItemDesc(id, date, desc);
 
+		// 添加规格参数
+		if (result.getStatus() == 200) {
+			throw  new RuntimeException();
+		}
+
+		result = insertItemParamItem(id, itemParams);
+
+		// 添加规格参数
 		if (result.getStatus() == 200) {
 			throw  new RuntimeException();
 		}
@@ -105,4 +118,16 @@ public class ItemServiceImpl implements ItemService {
 		itemDescMapper.insert(itemDesc);
 		return DeyongResult.ok();
 	}
+
+	private DeyongResult insertItemParamItem(long itemid, String paramItems) {
+		Date now = new Date();
+		TbItemParamItem itemParamItem = new TbItemParamItem();
+		itemParamItem.setItemId(itemid);
+		itemParamItem.setCreated(now);
+		itemParamItem.setUpdated(now);
+		itemParamItem.setParamData(paramItems);
+		itemParamItemMapper.insert(itemParamItem);
+		return DeyongResult.ok();
+	}
+
 }

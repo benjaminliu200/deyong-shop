@@ -15,24 +15,25 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 
 @Controller
+@RequestMapping("/item/param")
 public class ItemParamController {
 
     @Autowired
     private ItemParamService itemParamService;
 
-    @RequestMapping("/item/param/query/itemcatid/{itemCatid}")
+    @RequestMapping("/query/itemcatid/{itemCatid}")
     @ResponseBody
     public DeyongResult getItemParamByCatID(@PathVariable Long itemCatid) {
-        return itemParamService.getParamItemByCid(itemCatid);
+        return  itemParamService.getParamItemByCid(itemCatid);
     }
 
-    @RequestMapping("/item/param/list")
+    @RequestMapping("/list")
     @ResponseBody
     public EUDataGridResult getParamItemList(Integer page, Integer rows) {
         return itemParamService.getParamItemList(page, rows);
     }
 
-    @RequestMapping("/item/param/save/{itemCatid}")
+    @RequestMapping("/save/{itemCatid}")
     @ResponseBody
     public DeyongResult saveItemCat(@PathVariable Long itemCatid, String paramData) {
         // 创建pojo对象

@@ -1,4 +1,4 @@
-package deyong.mapper;
+package com.deyong.mapper;
 
 import com.deyong.pojo.TbItemParamItem;
 import com.deyong.pojo.TbItemParamItemExample;

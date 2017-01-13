@@ -42,11 +42,11 @@ public class ItemParamServiceImpl implements ItemParamService{
         TbItemParamExample example = new TbItemParamExample();
         TbItemParamExample.Criteria criteria = example.createCriteria();
         criteria.andItemCatIdEqualTo(cid);
-        List<TbItemParam> list = itemParamMapper.selectByExample(example);
+        List<TbItemParam> list = itemParamMapper.selectByExampleWithBLOBs(example);
         if (list != null && list.size() > 0) {
-            return DeyongResult.ok();
+            return DeyongResult.ok(list.get(0));
         }
-        return null;
+        return DeyongResult.ok();
     }
 
     @Override

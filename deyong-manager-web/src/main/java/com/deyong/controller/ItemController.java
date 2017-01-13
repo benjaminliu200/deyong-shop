@@ -51,9 +51,9 @@ public class ItemController {
 
 	@RequestMapping("/item/save")
 	@ResponseBody
-	public DeyongResult saveItem(TbItem tbItem, String desc) {
+	public DeyongResult saveItem(TbItem tbItem, String desc, String itemParams) {
 		// 添加商品信息
-		return itemService.saveItem(tbItem, desc, null);
+		return itemService.saveItem(tbItem, desc, itemParams);
 	}
 
 }
