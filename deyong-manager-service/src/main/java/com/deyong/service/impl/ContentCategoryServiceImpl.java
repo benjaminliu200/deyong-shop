@@ -65,4 +65,29 @@ public class ContentCategoryServiceImpl implements ContentCategoryService {
         contentCategoryMapper.insert(addContentCat);
         return DeyongResult.ok(addContentCat);
     }
+
+    @Override
+    public DeyongResult deleteContentCat(long parentId, long id) {
+        TbContentCategoryExample example = new TbContentCategoryExample();
+        TbContentCategoryExample.Criteria criteria = example.createCriteria();
+        criteria.andParentIdEqualTo(parentId);
+        criteria.andIdNotEqualTo(id);
+        List<TbContentCategory> list = contentCategoryMapper.selectByExample(example);
+        // 父分类，如果父分类除了当前这个要删除的分类，不存在分了，就说明这个父分类没有孩子。
+        TbContentCategory parentContentCategory = contentCategoryMapper.selectByPrimaryKey(parentId);
+        if (list == null && list.size() < 1) {
+            parentContentCategory.setIsParent(false);
+            contentCategoryMapper.updateByPrimaryKey(parentContentCategory);
+        }
+        contentCategoryMapper.deleteByPrimaryKey(id);
+        return DeyongResult.ok();
+    }
+
+    @Override
+    public DeyongResult updateContentCat(long id, String name) {
+        TbContentCategory contentCategory = contentCategoryMapper.selectByPrimaryKey(id);
+        contentCategory.setName(name);
+        contentCategoryMapper.updateByPrimaryKey(contentCategory);
+        return DeyongResult.ok();
+    }
 }

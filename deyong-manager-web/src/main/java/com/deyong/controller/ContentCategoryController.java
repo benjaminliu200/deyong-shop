@@ -32,4 +32,16 @@ public class ContentCategoryController {
     public DeyongResult insertContentCat(long parentId, String name) {
         return contentCategoryService.insertContentCat(parentId, name);
     }
+
+    @RequestMapping("/delete")
+    @ResponseBody
+    public DeyongResult deleteContentCat(long parentId, long id) {
+        return contentCategoryService.deleteContentCat(parentId, id);
+    }
+
+    @RequestMapping("/update")
+    @ResponseBody
+    public DeyongResult updateContentCat(long id, String name) {
+        return contentCategoryService.updateContentCat(id, name);
+    }
 }

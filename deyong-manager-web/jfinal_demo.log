@@ -2386,3 +2386,291 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 
 2017-01-12 09:48:17
 [INFO]-[Thread: http-bio-8080-exec-1]-[com.alibaba.druid.pool.DruidDataSource.init()]: {dataSource-1} inited
+
+2017-01-16 14:12:12
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.context.ContextLoader.initWebApplicationContext()]: Root WebApplicationContext: initialization started
+
+2017-01-16 14:12:12
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.context.support.AbstractApplicationContext.prepareRefresh()]: Refreshing Root WebApplicationContext: startup date [Mon Jan 16 14:12:12 CST 2017]; root of context hierarchy
+
+2017-01-16 14:12:12
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions()]: Loading XML bean definitions from file [G:\javaIDE\idea\ideawork\deyong-shop\deyong-manager-web\target\deyong-manager-web\WEB-INF\classes\spring\applicationContext-dao.xml]
+
+2017-01-16 14:12:13
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions()]: Loading XML bean definitions from file [G:\javaIDE\idea\ideawork\deyong-shop\deyong-manager-web\target\deyong-manager-web\WEB-INF\classes\spring\applicationContext-service.xml]
+
+2017-01-16 14:12:13
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions()]: Loading XML bean definitions from file [G:\javaIDE\idea\ideawork\deyong-shop\deyong-manager-web\target\deyong-manager-web\WEB-INF\classes\spring\applicationContext-trans.xml]
+
+2017-01-16 14:12:13
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties()]: Loading properties file from file [G:\javaIDE\idea\ideawork\deyong-shop\deyong-manager-web\target\deyong-manager-web\WEB-INF\classes\properties\db.properties]
+
+2017-01-16 14:12:13
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties()]: Loading properties file from file [G:\javaIDE\idea\ideawork\deyong-shop\deyong-manager-web\target\deyong-manager-web\WEB-INF\classes\properties\resources.properties]
+
+2017-01-16 14:12:13
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.context.ContextLoader.initWebApplicationContext()]: Root WebApplicationContext: initialization completed in 1060 ms
+
+2017-01-16 14:12:14
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.FrameworkServlet.initServletBean()]: FrameworkServlet 'deyong-manager': initialization started
+
+2017-01-16 14:12:14
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.context.support.AbstractApplicationContext.prepareRefresh()]: Refreshing WebApplicationContext for namespace 'deyong-manager-servlet': startup date [Mon Jan 16 14:12:14 CST 2017]; parent: Root WebApplicationContext
+
+2017-01-16 14:12:14
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions()]: Loading XML bean definitions from class path resource [spring/springmvc.xml]
+
+2017-01-16 14:12:14
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod()]: Mapped "{[/item/{itemId}],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.deyong.pojo.TbItem com.deyong.controller.ItemController.getItemById(java.lang.Long)
+
+2017-01-16 14:12:14
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod()]: Mapped "{[/item/list],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.ldy.common.pojo.EUDataGridResult com.deyong.controller.ItemController.getItemList(java.lang.Integer,java.lang.Integer)
+
+2017-01-16 14:12:14
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod()]: Mapped "{[/item/save],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.ldy.common.util.DeyongResult com.deyong.controller.ItemController.saveItem(com.deyong.pojo.TbItem,java.lang.String,java.lang.String)
+
+2017-01-16 14:12:14
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod()]: Mapped "{[/item/cat/list],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<com.ldy.common.pojo.EUTreeNode> com.deyong.controller.ItemController.getItemCatList(java.lang.Long)
+
+2017-01-16 14:12:14
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod()]: Mapped "{[/item/param/list],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.ldy.common.pojo.EUDataGridResult com.deyong.controller.ItemParamController.getParamItemList(java.lang.Integer,java.lang.Integer)
+
+2017-01-16 14:12:14
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod()]: Mapped "{[/item/param/save/{itemCatid}],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.ldy.common.util.DeyongResult com.deyong.controller.ItemParamController.saveItemCat(java.lang.Long,java.lang.String)
+
+2017-01-16 14:12:14
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod()]: Mapped "{[/item/param/query/itemcatid/{itemCatid}],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.ldy.common.util.DeyongResult com.deyong.controller.ItemParamController.getItemParamByCatID(java.lang.Long)
+
+2017-01-16 14:12:14
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod()]: Mapped "{[/showitem/{itemId}],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.deyong.controller.ItemParamItemController.showItemParam(long,org.springframework.ui.Model)
+
+2017-01-16 14:12:14
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod()]: Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.deyong.controller.PageController.showIndex()
+
+2017-01-16 14:12:14
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod()]: Mapped "{[/{page}],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.deyong.controller.PageController.showPage(java.lang.String)
+
+2017-01-16 14:12:14
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod()]: Mapped "{[/pic/upload],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.deyong.controller.PictureController.picUpload(org.springframework.web.multipart.MultipartFile)
+
+2017-01-16 14:12:14
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache()]: Looking for @ControllerAdvice: WebApplicationContext for namespace 'deyong-manager-servlet': startup date [Mon Jan 16 14:12:14 CST 2017]; parent: Root WebApplicationContext
+
+2017-01-16 14:12:14
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache()]: Looking for @ControllerAdvice: WebApplicationContext for namespace 'deyong-manager-servlet': startup date [Mon Jan 16 14:12:14 CST 2017]; parent: Root WebApplicationContext
+
+2017-01-16 14:12:14
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler()]: Mapped URL path [/js/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+
+2017-01-16 14:12:14
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler()]: Mapped URL path [/css/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+
+2017-01-16 14:12:14
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.FrameworkServlet.initServletBean()]: FrameworkServlet 'deyong-manager': initialization completed in 802 ms
+
+2017-01-16 14:12:21
+[WARN]-[Thread: http-bio-8080-exec-8]-[org.springframework.web.servlet.DispatcherServlet.noHandlerFound()]: No mapping found for HTTP request with URI [/content/category/list] in DispatcherServlet with name 'deyong-manager'
+
+2017-01-16 14:12:21
+[WARN]-[Thread: http-bio-8080-exec-1]-[org.springframework.web.servlet.DispatcherServlet.noHandlerFound()]: No mapping found for HTTP request with URI [/content/category/list] in DispatcherServlet with name 'deyong-manager'
+
+2017-01-16 14:12:24
+[INFO]-[Thread: http-bio-8080-exec-7]-[com.alibaba.druid.pool.DruidDataSource.init()]: {dataSource-1} inited
+
+2017-01-16 14:19:12
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.context.ContextLoader.initWebApplicationContext()]: Root WebApplicationContext: initialization started
+
+2017-01-16 14:19:12
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.context.support.AbstractApplicationContext.prepareRefresh()]: Refreshing Root WebApplicationContext: startup date [Mon Jan 16 14:19:12 CST 2017]; root of context hierarchy
+
+2017-01-16 14:19:12
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions()]: Loading XML bean definitions from file [G:\javaIDE\idea\ideawork\deyong-shop\deyong-manager-web\target\deyong-manager-web\WEB-INF\classes\spring\applicationContext-dao.xml]
+
+2017-01-16 14:19:12
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions()]: Loading XML bean definitions from file [G:\javaIDE\idea\ideawork\deyong-shop\deyong-manager-web\target\deyong-manager-web\WEB-INF\classes\spring\applicationContext-service.xml]
+
+2017-01-16 14:19:12
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions()]: Loading XML bean definitions from file [G:\javaIDE\idea\ideawork\deyong-shop\deyong-manager-web\target\deyong-manager-web\WEB-INF\classes\spring\applicationContext-trans.xml]
+
+2017-01-16 14:19:12
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties()]: Loading properties file from file [G:\javaIDE\idea\ideawork\deyong-shop\deyong-manager-web\target\deyong-manager-web\WEB-INF\classes\properties\db.properties]
+
+2017-01-16 14:19:12
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties()]: Loading properties file from file [G:\javaIDE\idea\ideawork\deyong-shop\deyong-manager-web\target\deyong-manager-web\WEB-INF\classes\properties\resources.properties]
+
+2017-01-16 14:19:13
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.context.ContextLoader.initWebApplicationContext()]: Root WebApplicationContext: initialization completed in 1246 ms
+
+2017-01-16 14:19:13
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.FrameworkServlet.initServletBean()]: FrameworkServlet 'deyong-manager': initialization started
+
+2017-01-16 14:19:13
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.context.support.AbstractApplicationContext.prepareRefresh()]: Refreshing WebApplicationContext for namespace 'deyong-manager-servlet': startup date [Mon Jan 16 14:19:13 CST 2017]; parent: Root WebApplicationContext
+
+2017-01-16 14:19:13
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions()]: Loading XML bean definitions from class path resource [spring/springmvc.xml]
+
+2017-01-16 14:19:13
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod()]: Mapped "{[/content/category/list],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<com.ldy.common.pojo.EUTreeNode> com.deyong.controller.ContentCategoryController.getContentCatList(long)
+
+2017-01-16 14:19:13
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod()]: Mapped "{[/item/cat/list],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<com.ldy.common.pojo.EUTreeNode> com.deyong.controller.ItemController.getItemCatList(java.lang.Long)
+
+2017-01-16 14:19:13
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod()]: Mapped "{[/item/{itemId}],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.deyong.pojo.TbItem com.deyong.controller.ItemController.getItemById(java.lang.Long)
+
+2017-01-16 14:19:13
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod()]: Mapped "{[/item/save],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.ldy.common.util.DeyongResult com.deyong.controller.ItemController.saveItem(com.deyong.pojo.TbItem,java.lang.String,java.lang.String)
+
+2017-01-16 14:19:13
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod()]: Mapped "{[/item/list],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.ldy.common.pojo.EUDataGridResult com.deyong.controller.ItemController.getItemList(java.lang.Integer,java.lang.Integer)
+
+2017-01-16 14:19:13
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod()]: Mapped "{[/item/param/save/{itemCatid}],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.ldy.common.util.DeyongResult com.deyong.controller.ItemParamController.saveItemCat(java.lang.Long,java.lang.String)
+
+2017-01-16 14:19:13
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod()]: Mapped "{[/item/param/query/itemcatid/{itemCatid}],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.ldy.common.util.DeyongResult com.deyong.controller.ItemParamController.getItemParamByCatID(java.lang.Long)
+
+2017-01-16 14:19:13
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod()]: Mapped "{[/item/param/list],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.ldy.common.pojo.EUDataGridResult com.deyong.controller.ItemParamController.getParamItemList(java.lang.Integer,java.lang.Integer)
+
+2017-01-16 14:19:13
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod()]: Mapped "{[/showitem/{itemId}],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.deyong.controller.ItemParamItemController.showItemParam(long,org.springframework.ui.Model)
+
+2017-01-16 14:19:13
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod()]: Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.deyong.controller.PageController.showIndex()
+
+2017-01-16 14:19:13
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod()]: Mapped "{[/{page}],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.deyong.controller.PageController.showPage(java.lang.String)
+
+2017-01-16 14:19:13
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod()]: Mapped "{[/pic/upload],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.deyong.controller.PictureController.picUpload(org.springframework.web.multipart.MultipartFile)
+
+2017-01-16 14:19:14
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache()]: Looking for @ControllerAdvice: WebApplicationContext for namespace 'deyong-manager-servlet': startup date [Mon Jan 16 14:19:13 CST 2017]; parent: Root WebApplicationContext
+
+2017-01-16 14:19:14
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache()]: Looking for @ControllerAdvice: WebApplicationContext for namespace 'deyong-manager-servlet': startup date [Mon Jan 16 14:19:13 CST 2017]; parent: Root WebApplicationContext
+
+2017-01-16 14:19:14
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler()]: Mapped URL path [/js/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+
+2017-01-16 14:19:14
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler()]: Mapped URL path [/css/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+
+2017-01-16 14:19:14
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.FrameworkServlet.initServletBean()]: FrameworkServlet 'deyong-manager': initialization completed in 596 ms
+
+2017-01-16 14:19:16
+[INFO]-[Thread: http-bio-8080-exec-2]-[com.alibaba.druid.pool.DruidDataSource.init()]: {dataSource-1} inited
+
+2017-01-16 14:19:51
+[WARN]-[Thread: http-bio-8080-exec-10]-[org.springframework.web.servlet.DispatcherServlet.noHandlerFound()]: No mapping found for HTTP request with URI [/content/category/create] in DispatcherServlet with name 'deyong-manager'
+
+2017-01-16 14:27:03
+[WARN]-[Thread: http-bio-8080-exec-5]-[org.springframework.web.servlet.DispatcherServlet.noHandlerFound()]: No mapping found for HTTP request with URI [/content/query/list] in DispatcherServlet with name 'deyong-manager'
+
+2017-01-16 16:11:07
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.context.ContextLoader.initWebApplicationContext()]: Root WebApplicationContext: initialization started
+
+2017-01-16 16:11:07
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.context.support.AbstractApplicationContext.prepareRefresh()]: Refreshing Root WebApplicationContext: startup date [Mon Jan 16 16:11:07 CST 2017]; root of context hierarchy
+
+2017-01-16 16:11:07
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions()]: Loading XML bean definitions from file [G:\javaIDE\idea\ideawork\deyong-shop\deyong-manager-web\target\deyong-manager-web\WEB-INF\classes\spring\applicationContext-dao.xml]
+
+2017-01-16 16:11:07
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions()]: Loading XML bean definitions from file [G:\javaIDE\idea\ideawork\deyong-shop\deyong-manager-web\target\deyong-manager-web\WEB-INF\classes\spring\applicationContext-service.xml]
+
+2017-01-16 16:11:08
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions()]: Loading XML bean definitions from file [G:\javaIDE\idea\ideawork\deyong-shop\deyong-manager-web\target\deyong-manager-web\WEB-INF\classes\spring\applicationContext-trans.xml]
+
+2017-01-16 16:11:08
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties()]: Loading properties file from file [G:\javaIDE\idea\ideawork\deyong-shop\deyong-manager-web\target\deyong-manager-web\WEB-INF\classes\properties\db.properties]
+
+2017-01-16 16:11:08
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties()]: Loading properties file from file [G:\javaIDE\idea\ideawork\deyong-shop\deyong-manager-web\target\deyong-manager-web\WEB-INF\classes\properties\resources.properties]
+
+2017-01-16 16:11:08
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.context.ContextLoader.initWebApplicationContext()]: Root WebApplicationContext: initialization completed in 1165 ms
+
+2017-01-16 16:11:09
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.FrameworkServlet.initServletBean()]: FrameworkServlet 'deyong-manager': initialization started
+
+2017-01-16 16:11:09
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.context.support.AbstractApplicationContext.prepareRefresh()]: Refreshing WebApplicationContext for namespace 'deyong-manager-servlet': startup date [Mon Jan 16 16:11:09 CST 2017]; parent: Root WebApplicationContext
+
+2017-01-16 16:11:09
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions()]: Loading XML bean definitions from class path resource [spring/springmvc.xml]
+
+2017-01-16 16:11:09
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod()]: Mapped "{[/content/category/list],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<com.ldy.common.pojo.EUTreeNode> com.deyong.controller.ContentCategoryController.getContentCatList(long)
+
+2017-01-16 16:11:09
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod()]: Mapped "{[/content/category/delete],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.ldy.common.util.DeyongResult com.deyong.controller.ContentCategoryController.deleteContentCat(long,long)
+
+2017-01-16 16:11:09
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod()]: Mapped "{[/content/category/update],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.ldy.common.util.DeyongResult com.deyong.controller.ContentCategoryController.updateContentCat(long,java.lang.String)
+
+2017-01-16 16:11:09
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod()]: Mapped "{[/content/category/create],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.ldy.common.util.DeyongResult com.deyong.controller.ContentCategoryController.insertContentCat(long,java.lang.String)
+
+2017-01-16 16:11:09
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod()]: Mapped "{[/content/save],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.ldy.common.util.DeyongResult com.deyong.controller.ContentController.insertContent(com.deyong.pojo.TbContent)
+
+2017-01-16 16:11:09
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod()]: Mapped "{[/content/query/list],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.ldy.common.pojo.EUDataGridResult com.deyong.controller.ContentController.getContentList(java.lang.Integer,java.lang.Integer)
+
+2017-01-16 16:11:09
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod()]: Mapped "{[/content/list/{contentCategoryId}],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.ldy.common.util.DeyongResult com.deyong.controller.ContentController.getContentList(java.lang.Long)
+
+2017-01-16 16:11:09
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod()]: Mapped "{[/item/cat/list],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.util.List<com.ldy.common.pojo.EUTreeNode> com.deyong.controller.ItemController.getItemCatList(java.lang.Long)
+
+2017-01-16 16:11:09
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod()]: Mapped "{[/item/list],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.ldy.common.pojo.EUDataGridResult com.deyong.controller.ItemController.getItemList(java.lang.Integer,java.lang.Integer)
+
+2017-01-16 16:11:09
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod()]: Mapped "{[/item/save],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.ldy.common.util.DeyongResult com.deyong.controller.ItemController.saveItem(com.deyong.pojo.TbItem,java.lang.String,java.lang.String)
+
+2017-01-16 16:11:09
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod()]: Mapped "{[/item/{itemId}],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.deyong.pojo.TbItem com.deyong.controller.ItemController.getItemById(java.lang.Long)
+
+2017-01-16 16:11:09
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod()]: Mapped "{[/item/param/query/itemcatid/{itemCatid}],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.ldy.common.util.DeyongResult com.deyong.controller.ItemParamController.getItemParamByCatID(java.lang.Long)
+
+2017-01-16 16:11:09
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod()]: Mapped "{[/item/param/save/{itemCatid}],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.ldy.common.util.DeyongResult com.deyong.controller.ItemParamController.saveItemCat(java.lang.Long,java.lang.String)
+
+2017-01-16 16:11:09
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod()]: Mapped "{[/item/param/list],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.ldy.common.pojo.EUDataGridResult com.deyong.controller.ItemParamController.getParamItemList(java.lang.Integer,java.lang.Integer)
+
+2017-01-16 16:11:09
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod()]: Mapped "{[/showitem/{itemId}],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.deyong.controller.ItemParamItemController.showItemParam(long,org.springframework.ui.Model)
+
+2017-01-16 16:11:09
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod()]: Mapped "{[/{page}],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.deyong.controller.PageController.showPage(java.lang.String)
+
+2017-01-16 16:11:09
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod()]: Mapped "{[/],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.deyong.controller.PageController.showIndex()
+
+2017-01-16 16:11:09
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod()]: Mapped "{[/pic/upload],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.deyong.controller.PictureController.picUpload(org.springframework.web.multipart.MultipartFile)
+
+2017-01-16 16:11:09
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache()]: Looking for @ControllerAdvice: WebApplicationContext for namespace 'deyong-manager-servlet': startup date [Mon Jan 16 16:11:09 CST 2017]; parent: Root WebApplicationContext
+
+2017-01-16 16:11:09
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache()]: Looking for @ControllerAdvice: WebApplicationContext for namespace 'deyong-manager-servlet': startup date [Mon Jan 16 16:11:09 CST 2017]; parent: Root WebApplicationContext
+
+2017-01-16 16:11:09
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler()]: Mapped URL path [/js/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+
+2017-01-16 16:11:09
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler()]: Mapped URL path [/css/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+
+2017-01-16 16:11:09
+[INFO]-[Thread: localhost-startStop-1]-[org.springframework.web.servlet.FrameworkServlet.initServletBean()]: FrameworkServlet 'deyong-manager': initialization completed in 534 ms
+
+2017-01-16 16:11:16
+[INFO]-[Thread: http-bio-8080-exec-1]-[com.alibaba.druid.pool.DruidDataSource.init()]: {dataSource-1} inited

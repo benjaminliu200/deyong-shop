@@ -36,6 +36,7 @@
         <commons.log.version>1.2</commons.log.version>
         <log4j.version>1.2.17</log4j.version>
         <jsch.version>0.1.49</jsch.version>
+        <okhttp3.version>3.4.1</okhttp3.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -215,6 +216,14 @@
                 <artifactId>jsch</artifactId>
                 <version>${jsch.version}</version>
             </dependency>
+
+            <!-- okhttp3 发送请求获取服务器数据 -->
+            <dependency>
+                <groupId>com.squareup.okhttp3</groupId>
+                <artifactId>okhttp</artifactId>
+                <version>${okhttp3.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
