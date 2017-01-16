@@ -1,4 +1,4 @@
-package com.deyong.portal.pojo;
+package com.deyong.rest.pojo;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

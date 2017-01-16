@@ -1,3 +1,4 @@
+com\deyong\service\impl\ContentCategoryServiceImpl.class
 com\deyong\service\ItemService.class
 com\deyong\service\impl\ItemParamServiceImpl.class
 com\deyong\service\impl\ItemServiceImpl.class
@@ -5,6 +6,7 @@ com\deyong\service\ItemCatService.class
 com\deyong\service\PictureService.class
 com\deyong\service\ItemParamItemService.class
 com\deyong\service\impl\PictureServiceImpl.class
+com\deyong\service\ContentCategoryService.class
 com\deyong\service\impl\ItemParamItemServiceImpl.class
 com\deyong\service\ItemParamService.class
 com\deyong\service\impl\ItemCatServiceImpl.class
