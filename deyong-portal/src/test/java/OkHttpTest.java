@@ -20,5 +20,6 @@ public class OkHttpTest {
         // 执行请求
         // 取响应结果
         System.out.println(response.body().string());
+        System.out.println(response.headers().names());
     }
 }
