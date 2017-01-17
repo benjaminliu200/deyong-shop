@@ -9,11 +9,7 @@ import java.util.List;
  */
 public interface ContentService {
 
-    /**
-     * 通过调用Rest服务得到 content 的list字符串
-     * @return
-     */
-    String getContentList();
+
 
     /**
      * 通过contentid得到 旗下所有分类的content

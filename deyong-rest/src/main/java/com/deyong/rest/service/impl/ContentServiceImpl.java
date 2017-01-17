@@ -16,20 +16,8 @@ import java.util.List;
 @Service
 public class ContentServiceImpl implements ContentService {
 
-    @Value("REST_BASE_URL")
-    private String REST_BASE_URL;
-    @Value("REST_INDEX_AD_URL")
-    private String REST_INDEX_AD_URL;
-
     @Autowired
     private TbContentMapper contentMapper;
-
-    @Override
-    public String getContentList() {
-        String baseUrl = REST_BASE_URL + REST_INDEX_AD_URL;
-
-        return null;
-    }
 
     @Override
     public List<TbContent> getContentList(long contentid) {

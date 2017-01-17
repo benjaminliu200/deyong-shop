@@ -51,6 +51,12 @@
             <artifactId>jsp-api</artifactId>
             <scope>provided</scope>
         </dependency>
+
+        <!-- Redis客户端 -->
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+        </dependency>
     </dependencies>
 
     <!-- 8080 端口被后台占用，这里端口改成 8081 -->
