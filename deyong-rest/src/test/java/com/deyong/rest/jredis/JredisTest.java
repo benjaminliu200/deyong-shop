@@ -40,7 +40,8 @@ public class JredisTest {
         pool.close();
     }
 
-    @Test
+    // 集群的redis，先注释，没有打开集群
+    // @Test
     public void testJedisCluster() {
         HashSet<HostAndPort> nodes = new HashSet<>();
         nodes.add(new HostAndPort("192.168.0.222", 7001));

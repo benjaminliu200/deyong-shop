@@ -3,10 +3,14 @@ package com.deyong.rest.service.impl;
 import com.deyong.mapper.TbItemCatMapper;
 import com.deyong.pojo.TbItemCat;
 import com.deyong.pojo.TbItemCatExample;
+import com.deyong.rest.dao.JedisClient;
 import com.deyong.rest.pojo.CatNode;
 import com.deyong.rest.pojo.CatResult;
 import com.deyong.rest.service.ItemCatService;
+import com.ldy.common.util.JsonUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -20,10 +24,29 @@ public class ItemCatServiceImpl implements ItemCatService {
     @Autowired
     private TbItemCatMapper itemCatMapper;
 
+    @Autowired
+    private JedisClient jedisClient;
+
+    @Value("${ITEAM_CAT_KEY}")
+    private String ITEAM_CAT_KEY;
+
     @Override
     public CatResult getItemCatList() {
         CatResult catResult = new CatResult();
-        catResult.setData(getCatList(0));
+        List list = null;
+        // 从缓冲中取数据
+        try {
+            String cacheString = jedisClient.hget(ITEAM_CAT_KEY, String.valueOf(0));
+            if (!StringUtils.isBlank(cacheString)) {
+                list = JsonUtils.jsonToList(cacheString, Object.class);
+            } else {
+                list = getCatList(0);
+                jedisClient.hset(ITEAM_CAT_KEY, String.valueOf(0), JsonUtils.objectToJson(list));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        catResult.setData(list);
         return catResult;
     }
 
@@ -33,6 +56,7 @@ public class ItemCatServiceImpl implements ItemCatService {
      * @return
      */
     private List<?> getCatList(long parentId) {
+
         // 创建查询条件
         TbItemCatExample example = new TbItemCatExample();
         TbItemCatExample.Criteria criteria = example.createCriteria();

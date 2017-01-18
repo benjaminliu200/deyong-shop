@@ -75,5 +75,6 @@
 
     <bean id="jedisClientSingle" class="com.deyong.rest.dao.impl.JedisClientSingle"/>
 
-    <bean id="jedisClientCluster" class="com.deyong.rest.dao.impl.JedisClientCluster" />
+    <!-- 这二个bean是同种类型的bean，如果都配置了 Autowire会注入失败 -->
+    <!--<bean id="jedisClientCluster" class="com.deyong.rest.dao.impl.JedisClientCluster" />-->
 </beans>
