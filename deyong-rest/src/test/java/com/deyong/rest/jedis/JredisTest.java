@@ -1,4 +1,4 @@
-package com.deyong.rest.jredis;
+package com.deyong.rest.jedis;
 
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
