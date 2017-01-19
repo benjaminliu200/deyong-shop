@@ -20,4 +20,11 @@ public interface ItemService {
      * @return
      */
     DeyongResult getItemDesc(long itemId);
+
+    /**
+     * 得到商品规格参数
+     * @param itemId
+     * @return
+     */
+    DeyongResult getItemParam(long itemId);
 }

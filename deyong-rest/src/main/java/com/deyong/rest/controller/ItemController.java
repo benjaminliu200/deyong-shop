@@ -30,4 +30,10 @@ public class ItemController {
     public DeyongResult getItemDesc(@PathVariable long itemId) {
         return itemService.getItemDesc(itemId);
     }
+
+    @RequestMapping("/param/{itemId}")
+    @ResponseBody
+    public DeyongResult getItemParam(@PathVariable long itemId) {
+        return itemService.getItemParam(itemId);
+    }
 }
