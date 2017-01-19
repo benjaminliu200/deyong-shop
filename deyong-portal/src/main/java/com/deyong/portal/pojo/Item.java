@@ -1,4 +1,6 @@
-package com.deyong.search.pojo;
+package com.deyong.portal.pojo;
+
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * Created by Benjamin on 2017/1/18.
@@ -9,6 +11,7 @@ public class Item {
     private String sell_point;
     private long price;
     private String image;
+    private String[] images;
     private String category_name;
 
     public String getId() {
@@ -59,4 +62,10 @@ public class Item {
         this.category_name = category_name;
     }
 
+    public String[] getImages() {
+        if (!StringUtils.isBlank(image)) {
+            return image.split(",");
+        }
+        return null;
+    }
 }

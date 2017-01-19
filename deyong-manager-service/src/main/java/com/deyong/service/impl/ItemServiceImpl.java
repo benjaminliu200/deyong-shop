@@ -12,8 +12,10 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.ldy.common.pojo.EUDataGridResult;
 import com.ldy.common.util.DeyongResult;
+import com.ldy.common.util.HttpClientUtil;
 import com.ldy.common.util.IDUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
@@ -39,6 +41,11 @@ public class ItemServiceImpl implements ItemService {
 
 	@Autowired
 	private TbItemParamItemMapper itemParamItemMapper;
+
+	@Value("${SOLR_BASE_URL}")
+	private String SOLR_BASE_URL;
+	@Value("${SOLR_SAVE_URL}")
+	private String SOLR_SAVE_URL;
 	@Override
 	public TbItem getItemById(Long itemId) {
 		//TbItem item = itemMapper.selectByPrimaryKey(itemId);
@@ -90,16 +97,19 @@ public class ItemServiceImpl implements ItemService {
 		DeyongResult result = insertItemDesc(id, date, desc);
 
 		// 添加规格参数
-		if (result.getStatus() == 200) {
-			throw  new RuntimeException();
+		if (result.getStatus() != 200) {
+			throw new RuntimeException();
 		}
 
 		result = insertItemParamItem(id, itemParams);
 
 		// 添加规格参数
-		if (result.getStatus() == 200) {
-			throw  new RuntimeException();
+		if (result.getStatus() != 200) {
+			throw new RuntimeException();
 		}
+
+		// 将添加的商品加入到 solr索引库中 调用search 服务
+		HttpClientUtil.doGet(SOLR_BASE_URL + SOLR_SAVE_URL + id);
 		return DeyongResult.ok();
 	}
 

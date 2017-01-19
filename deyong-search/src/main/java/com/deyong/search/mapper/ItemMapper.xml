@@ -1,16 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.deyong.search.mapper.ItemMapper">
+
+    <sql id="Base_Item_List" >
+        a.id,
+        a.title,
+        a.sell_point,
+        a.price,
+        a.image,
+        b.`name` category_name
+    </sql>
+
     <select id="getItemList" resultType="com.deyong.search.pojo.Item">
         SELECT
-            a.id,
-            a.title,
-            a.sell_point,
-            a.price,
-            a.image,
-            b.`name` category_name
+          <include refid="Base_Item_List" />
         FROM
             tb_item a
         LEFT JOIN tb_item_cat b ON a.cid = b.id
+    </select>
+
+    <select id="getItemByItemID" resultType="com.deyong.search.pojo.Item" parameterType="java.lang.Long">
+        SELECT
+        <include refid="Base_Item_List" />
+        FROM
+        tb_item a
+        LEFT JOIN tb_item_cat b ON a.cid = b.id
+        WHERE  a.id = #{id,jdbcType=BIGINT}
     </select>
 </mapper>
